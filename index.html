@@ -1,125 +1,198 @@
-<!DOCTYPE html>
-<html lang="en" class="dark scroll-smooth">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>OrionPulse Technologies OPC Private Limited — AI Automation, Digital Marketing, SEO & Web Design</title>
-  
-  <!-- Primary Meta Tags -->
-  <meta name="title" content="OrionPulse Technologies OPC Private Limited — AI Automation, Digital Marketing, SEO & Web Design" />
-  <meta name="description" content="AI-powered digital marketing, high-converting web design, automated lead generation, SEO, and performance growth strategies for ambitious global businesses." />
-  <meta name="keywords" content="AI Automation, Digital Marketing, SEO, Web Design, Web Development, OrionPulse Technologies, Growth Agency, Performance Marketing, Meta Ads, Google Ads, CRM Automation, India AI Agency" />
-  <meta name="author" content="OrionPulse Technologies OPC Private Limited" />
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://orionpulse.co.in/" />
+@import "tailwindcss";
 
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://orionpulse.co.in/" />
-  <meta property="og:title" content="OrionPulse Technologies — Grow Smarter. Scale Faster. Dominate Digitally." />
-  <meta property="og:description" content="AI-powered digital marketing, modern websites, marketing automation, SEO, and growth engineering for high-growth enterprises." />
-  <meta property="og:image" content="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80" />
+/* Font Families */
+:root {
+  --font-sans: "Plus Jakarta Sans", "Inter", -apple-system, BlinkMacSystemFont,
+    sans-serif;
+  --font-heading: "Outfit", "Inter", sans-serif;
+  --font-mono: "Space Grotesk", monospace;
 
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image" />
-  <meta property="twitter:url" content="https://orionpulse.co.in/" />
-  <meta property="twitter:title" content="OrionPulse Technologies OPC Private Limited" />
-  <meta property="twitter:description" content="Next-generation AI Automation & Digital Marketing Infrastructure." />
-  <meta property="twitter:image" content="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80" />
+  /* Brand Colors */
+  --color-primary: #0a84ff;
+  --color-accent: #00e5ff;
+  --color-dark: #0f172a;
+  --color-light: #f8fafc;
+  --color-success: #10b981;
+  --color-text: #111827;
+  --color-subtext: #6b7280;
+}
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+body {
+  font-family: var(--font-sans);
+  background-color: #0f172a;
+  color: #f8fafc;
+  overflow-x: hidden;
+}
 
-  <!-- FontAwesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+.font-heading {
+  font-family: var(--font-heading);
+}
 
-  <!-- Stylesheet -->
-  <link rel="stylesheet" href="./style.css" />
+.font-mono {
+  font-family: var(--font-mono);
+}
 
-  <!-- Confetti JS for form success -->
-  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
 
-  <!-- JSON-LD Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "OrionPulse Technologies OPC Private Limited",
-    "url": "https://orionpulse.co.in",
-    "logo": "https://orionpulse.co.in/assets/logo.png",
-    "description": "AI-powered digital marketing, websites, automation, SEO, and growth strategies built for ambitious businesses.",
-    "email": "contact@orionpulse.co.in",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Bengaluru",
-      "addressRegion": "Karnataka",
-      "addressCountry": "IN"
-    },
-    "sameAs": [
-      "https://linkedin.com/company/orionpulse",
-      "https://twitter.com/orionpulse_ai",
-      "https://instagram.com/orionpulse.co.in"
-    ]
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00e5ff;
+}
+
+/* Glassmorphism Classes */
+.glass-card {
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-card:hover {
+  border-color: rgba(0, 229, 255, 0.3);
+  box-shadow: 0 10px 30px -10px rgba(0, 229, 255, 0.15);
+}
+
+.glass-nav {
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+/* Infinite Marquee Animation */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
   }
-  </script>
-</head>
-<body class="bg-[#0B0F19] text-[#F8FAFC] antialiased selection:bg-[#0A84FF] selection:text-white relative overflow-x-hidden">
+  100% {
+    transform: translateX(-50%);
+  }
+}
 
-  <!-- Progress Bar -->
-  <div id="scroll-progress" class="fixed top-0 left-0 h-[3px] bg-gradient-to-r from-[#0A84FF] via-[#00E5FF] to-[#10B981] z-50 w-0 transition-all duration-150"></div>
+.animate-marquee {
+  display: flex;
+  animation: marquee 30s linear infinite;
+}
 
-  <!-- Announcement Bar -->
-  <div id="announcement-bar" class="bg-gradient-to-r from-[#0A84FF]/20 via-[#00E5FF]/20 to-[#10B981]/20 border-b border-white/10 text-xs sm:text-sm py-2 px-4 text-center backdrop-blur-md relative z-40 flex items-center justify-center gap-2">
-    <span class="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-semibold bg-[#00E5FF]/20 text-[#00E5FF] border border-[#00E5FF]/30">NEW</span>
-    <span>OrionPulse 10.0 AI Growth Engine is live — Unlock up to 4.2x ROI on performance campaigns.</span>
-    <button onclick="scrollToSection('lead-form')" class="underline font-semibold hover:text-[#00E5FF] transition-colors">Claim Free Audit &rarr;</button>
-    <button id="close-announcement" class="absolute right-4 text-gray-400 hover:text-white" aria-label="Close Announcement">&times;</button>
-  </div>
+.marquee-wrapper:hover .animate-marquee {
+  animation-play-state: paused;
+}
 
-  <!-- Sticky Navigation Header -->
-  <header id="main-header" class="sticky top-0 z-40 w-full transition-all duration-300 backdrop-blur-xl bg-[#0F172A]/80 border-b border-slate-800/80">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-      
-      <!-- Brand Logo -->
-      <a href="#" class="flex items-center gap-3 group" id="brand-logo">
-        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-[#0A84FF] via-[#00E5FF] to-[#10B981] p-[2px] shadow-lg shadow-[#0A84FF]/20 group-hover:shadow-[#00E5FF]/40 transition-all duration-300">
-          <div class="w-full h-full bg-[#0F172A] rounded-[10px] flex items-center justify-center relative overflow-hidden">
-            <span class="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#0A84FF] to-[#00E5FF] text-xl font-heading">OP</span>
-            <span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-[#00E5FF] animate-pulse"></span>
-          </div>
-        </div>
-        <div class="flex flex-col">
-          <span class="font-bold text-lg sm:text-xl tracking-tight text-white font-heading group-hover:text-[#00E5FF] transition-colors">OrionPulse<span class="text-[#00E5FF]">.</span></span>
-          <span class="text-[10px] tracking-wider uppercase text-slate-400 font-semibold">Technologies OPC Pvt Ltd</span>
-        </div>
-      </a>
+/* Glowing Text Effect */
+.text-glow {
+  text-shadow: 0 0 20px rgba(0, 229, 255, 0.4);
+}
 
-      <!-- Desktop Nav Links -->
-      <nav class="hidden lg:flex items-center space-x-1 xl:space-x-2 text-sm font-medium text-slate-300" id="desktop-nav">
-        <a href="#services" class="px-3 py-2 rounded-lg hover:text-white hover:bg-white/5 transition-all">Services</a>
-        <a href="#why-us" class="px-3 py-2 rounded-lg hover:text-white hover:bg-white/5 transition-all">Why Us</a>
-        <a href="#about" class="px-3 py-2 rounded-lg hover:text-white hover:bg-white/5 transition-all">About</a>
-        <a href="#portfolio" class="px-3 py-2 rounded-lg hover:text-white hover:bg-white/5 transition-all">Portfolio</a>
-        <a href="#case-studies" class="px-3 py-2 rounded-lg hover:text-white hover:bg-white/5 transition-all">Case Studies</a>
-        <a href="#ai-showcase" class="px-3 py-2 rounded-lg hover:text-[#00E5FF] hover:bg-[#00E5FF]/10 text-[#00E5FF] font-semibold transition-all flex items-center gap-1.5"><i class="fa-solid font-xs fa-wand-magic-sparkles"></i> AI Demo</a>
-        <a href="#pricing" class="px-3 py-2 rounded-lg hover:text-white hover:bg-white/5 transition-all">Pricing</a>
-        <a href="#faq" class="px-3 py-2 rounded-lg hover:text-white hover:bg-white/5 transition-all">FAQ</a>
-      </nav>
+/* Service Tab Buttons */
+.service-tab-btn,
+.portfolio-tab-btn {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #94a3b8;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
 
-      <!-- Action Buttons -->
-      <div class="hidden sm:flex items-center space-x-3" id="header-actions">
-        <button onclick="openBookingModal()" class="px-4 py-2.5 rounded-xl border border-slate-700 text-slate-200 text-sm font-semibold hover:border-[#0A84FF] hover:text-white hover:bg-[#0A84FF]/10 transition-all duration-300 flex items-center gap-2">
-          <i class="fa-regular fa-calendar-check text-[#00E5FF]"></i> Book Call
-        </button>
-        <button onclick="scrollToSection('lead-form')" class="relative group overflow-hidden px-5 py-2.5 rounded-xl bg-gradient-to-r from-[#0A84FF] to-[#00E5FF] text-white text-sm font-bold shadow-lg shadow-[#0A84FF]/30 hover:shadow-[#00E5FF]/50 transition-all duration-300 transform hover:-translate-y-0.5 active:translate-y-0">
-          <span class="relative z-10 flex items-center gap-2">
-            Get Free Proposal <i class="fa-solid fa-arrow-right text-xs transition-transform group-hover:translate-x-1"></i>
-          </span>
-          <span class="absolute inset-0 bg-gradient-to-r from-[#00E5FF] to-[#10B981] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-        </button>
-      </div>
+.service-tab-btn:hover,
+.portfolio-tab-btn:hover {
+  color: #ffffff;
+  border-color: #00e5ff;
+}
+
+.service-tab-btn.active,
+.portfolio-tab-btn.active {
+  background: linear-gradient(135deg, #0a84ff, #00e5ff);
+  color: #ffffff;
+  border-color: transparent;
+  box-shadow: 0 4px 14px rgba(10, 132, 255, 0.3);
+}
+
+/* Floating Animation */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Gradient Mesh Border */
+.gradient-border {
+  position: relative;
+  border-radius: 1rem;
+  background: #0f172a;
+}
+
+.gradient-border::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: 1.05rem;
+  background: linear-gradient(135deg, #0a84ff, #00e5ff, #10b981);
+  z-index: -1;
+  opacity: 0.3;
+  transition: opacity 0.3s ease;
+}
+
+.gradient-border:hover::before {
+  opacity: 0.8;
+}
+
+/* Ripple Button Effect */
+.btn-ripple {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Modal Animations */
+@keyframes fadeInModal {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+#service-modal-content,
+#portfolio-modal,
+#success-modal > div,
+#booking-modal > div {
+  animation: fadeInModal 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Custom Checkbox Style */
+input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+}
+
+/* Range Input Custom Styling */
+input[type="range"]::-webkit-slider-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #00e5ff;
+  box-shadow: 0 0 10px #00e5ff;
+  cursor: pointer;
+}      </div>
 
       <!-- Mobile Menu Button -->
       <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-xl text-slate-300 hover:text-white hover:bg-white/10 focus:outline-none" aria-label="Toggle Mobile Menu">
