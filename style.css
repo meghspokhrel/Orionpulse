@@ -218,3 +218,20 @@ margin-bottom:30px;
 font-size:18px;
 color:#cbd5e1;
 }
+.glass-card{
+  background:rgba(255,255,255,.08);
+  backdrop-filter:blur(12px);
+  border:1px solid rgba(255,255,255,.15);
+  border-radius:20px;
+  padding:25px;
+  margin:20px;
+  transition:.3s;
+}
+
+.glass-card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 20px 40px rgba(59,130,246,.25);
+}
+html{
+  scroll-behavior:smooth;
+}
