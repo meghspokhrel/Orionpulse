@@ -140,3 +140,35 @@ font-size:18px;
 }
 
 }
+.badge{
+display:inline-block;
+padding:10px 20px;
+background:rgba(37,99,235,.15);
+border:1px solid #2563eb;
+border-radius:50px;
+margin-bottom:25px;
+color:#7fb3ff;
+font-weight:bold;
+}
+
+.hero-buttons{
+display:flex;
+gap:20px;
+justify-content:center;
+flex-wrap:wrap;
+margin-top:30px;
+}
+
+.secondary{
+background:transparent;
+border:2px solid #2563eb;
+}
+
+.secondary:hover{
+background:#2563eb;
+}
+
+.hero{
+background:
+radial-gradient(circle at top,#1d4ed8 0%,#050816 45%,#000 100%);
+}
