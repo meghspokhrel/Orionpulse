@@ -172,3 +172,33 @@ background:#2563eb;
 background:
 radial-gradient(circle at top,#1d4ed8 0%,#050816 45%,#000 100%);
 }
+
+.stats{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:25px;
+padding:60px 20px;
+}
+
+.stat{
+background:#111827;
+padding:30px;
+border-radius:18px;
+text-align:center;
+width:180px;
+transition:.3s;
+}
+
+.stat:hover{
+transform:translateY(-8px);
+}
+
+.stat h2{
+font-size:38px;
+color:#3B82F6;
+}
+
+.stat p{
+color:#d1d5db;
+}
