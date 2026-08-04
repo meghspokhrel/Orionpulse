@@ -14,334 +14,104 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Orionpulse | Digital Marketing & AI Automation</title>
 
-<link rel="stylesheet" href="style.css">
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>OrionPulse | Premium Digital Marketing Agency</title>
+
+<meta name="description" content="OrionPulse helps businesses grow with SEO, Google Ads, Meta Ads, Website Development, AI Automation and Digital Marketing.">
+
+<meta name="keywords" content="SEO Agency, Digital Marketing, Google Ads, Meta Ads, Website Development, AI Automation">
+
+<meta name="author" content="OrionPulse">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+
+<script src="https://kit.fontawesome.com/your-kit.js" crossorigin="anonymous"></script>
+
 </head>
-<script src="//code.tidio.co/ivvczwke2kwjejhtj5svytunzvk6vg1q.js" async></script>
-<script>
 
-const counters=document.querySelectorAll('.counter');
+<body>
 
-const speed=200;
+<header class="navbar">
 
-const observer=new IntersectionObserver(entries=>{
-
-entries.forEach(entry=>{
-
-if(entry.isIntersecting){
-
-const counter=entry.target;
-
-const target=+counter.getAttribute('data-target');
-
-let count=0;
-
-const update=()=>{
-
-const increment=target/speed;
-
-if(count<target){
-
-count+=increment;
-
-counter.innerText=Math.ceil(count);
-
-requestAnimationFrame(update);
-
-}else{
-
-counter.innerText=target+"+";
-
-}
-
-};
-
-update();
-
-observer.unobserve(counter);
-
-}
-
-});
-
-});
-
-counters.forEach(counter=>observer.observe(counter));
-
-</script>  
-<div id="proposalModal" class="modal">
-
-<div class="modal-content">
-
-<span class="close">&times;</span>
-
-<h2>Get Your Free Digital Growth Proposal</h2>
-
-<p>Tell us about your business and we'll prepare a personalized strategy.</p>
-
-<form id="proposalForm">
-
-<input type="text" placeholder="Full Name" required>
-
-<input type="text" placeholder="Business Name" required>
-
-<input type="email" placeholder="Business Email" required>
-
-<input type="tel" placeholder="Phone Number" required>
-
-<select required>
-
-<option value="">Select Service</option>
-
-<option>SEO Optimization</option>
-
-<option>Website Development</option>
-
-<option>Google Ads</option>
-
-<option>Meta Ads</option>
-
-<option>AI Automation</option>
-
-<option>Complete Digital Marketing</option>
-
-</select>
-
-<select required>
-
-<option value="">Monthly Budget</option>
-
-<option>Below ₹25,000</option>
-
-<option>₹25,000 - ₹50,000</option>
-
-<option>₹50,000 - ₹1,00,000</option>
-
-<option>Above ₹1,00,000</option>
-
-</select>
-
-<textarea placeholder="Describe your business goals"></textarea>
-
-<button type="submit">
-🚀 Send Proposal Request
-</button>
-
-</form>
-
+<div class="logo">
+<h2>ORIONPULSE</h2>
 </div>
 
-</div>
- <script>
+<nav>
 
-const modal=document.getElementById("proposalModal");
+<ul>
 
-const btn=document.getElementById("proposalBtn");
+<li><a href="#home">Home</a></li>
 
-const close=document.querySelector(".close");
+<li><a href="#services">Services</a></li>
 
-btn.onclick=()=>{
+<li><a href="#portfolio">Portfolio</a></li>
 
-modal.style.display="block";
+<li><a href="#about">About</a></li>
 
-}
+<li><a href="#contact">Contact</a></li>
 
-close.onclick=()=>{
+</ul>
 
-modal.style.display="none";
-
-}
-
-window.onclick=(e)=>{
-
-if(e.target==modal){
-
-modal.style.display="none";
-
-}
-
-}
-
-document.getElementById("proposalForm").addEventListener("submit",function(e){
-
-e.preventDefault();
-
-alert("✅ Thank you! Your proposal request has been received. We'll contact you within 24 hours.");
-
-modal.style.display="none";
-
-this.reset();
-
-});
-
- </script>
-    <body>
-
-<header>
-<nav class="navbar">
-    <div class="logo">ORIONPULSE</div>
-
-    <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#pricing">Pricing</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
-
-
-    </a>
 </nav>
+
+<a href="#proposal" class="nav-btn">Get Proposal</a>
+
 </header>
+
 <section id="home" class="hero">
 
-    <div class="animated-bg">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
-    <button id="proposalBtn" class="proposal-btn">
-    🚀 Get Free Proposal
-    </button>
+<div class="hero-content">
 
-    <div class="hero-content">
+<h1>
+Grow Faster With
+<span>AI-Powered Digital Marketing</span>
+</h1>
 
-        <p class="tagline">
-            🚀 AI • SEO • Websites • Digital Marketing
-        </p>
+<p>
 
-        <h1>
-            Scale Your Business with
-            <span>AI-Powered Digital Marketing</span>
-        </h1>
+We help ambitious businesses dominate search results, generate high-quality leads, and scale revenue through premium SEO, paid advertising, web design, and AI-powered marketing automation.
 
-        <p class="hero-text">
-            Helping ambitious businesses grow through SEO,
-            high-converting websites, Google Ads,
-            AI automation and performance marketing.
-        </p>
+</p>
 
-        <div class="hero-buttons">
-            <a href="#contact" class="primary-btn">
-                Get Free Consultation
-            </a>
+<div class="hero-buttons">
 
-            <a href="#portfolio" class="secondary-btn">
-                View Portfolio
-            </a>
-        </div>
-<section class="stats">
+<a href="#contact" class="primary-btn">Book Free Consultation</a>
 
-<div class="stat-card">
-<h2 class="counter" data-target="150">0</h2>
-<p>Projects Completed</p>
+<a href="#services" class="secondary-btn">Explore Services</a>
+
 </div>
 
-<div class="stat-card">
-<h2 class="counter" data-target="98">0</h2>
-<p>Client Satisfaction %</p>
 </div>
 
-<div class="stat-card">
-<h2 class="counter" data-target="24">0</h2>
-<p>Hours AI Support</p>
-</div>
+<div class="hero-image">
 
-<div class="stat-card">
-<h2 class="counter" data-target="12">0</h2>
-<p>Digital Services</p>
-</div>
+<img src="images/hero.png" alt="Digital Marketing">
 
-</section>
-    </div>
-
-</section>
-<section class="stats">
-    <div class="stat">
-        <h2>100+</h2>
-        <p>Marketing Strategies</p>
-    </div>
-
-    <div class="stat">
-        <h2>24/7</h2>
-        <p>AI Support</p>
-    </div>
-
-    <div class="stat">
-        <h2>SEO</h2>
-        <p>Growth Focused</p>
-    </div>
-
-    <div class="stat">
-        <h2>AI</h2>
-        <p>Automation Solutions</p>
-    </div>
-
-<h2>Why Choose Orionpulse?</h2>
-
-<div class="card">
-<h3>🚀 Results-Driven Strategy</h3>
-<p>We focus on measurable growth, leads, and return on investment.</p>
-</div>
-
-<div class="card">
-<h3>🤖 AI-Powered Automation</h3>
-<p>Automate customer interactions and save valuable business time.</p>
-</div>
-    
-<div class="card">
-<h3>📈 SEO & Performance Marketing</h3>
-<p>Improve search rankings and run campaigns that convert visitors into customers.</p>
 </div>
 
 </section>
 
-   <h2>Our Impact</h2>
+<div class="scroll-down">
 
-<div class="card">
-<h3>100+</h3>
-<p>Marketing Campaigns Planned</p>
+<span></span>
+
 </div>
 
-<div class="card">
-<h3>24/7</h3>
-<p>AI Customer Support</p>
-</div>
+<script src="js/script.js"></script>
 
-<div class="card">
-<h3>SEO</h3>
-<p>Focused on Long-Term Organic Growth</p>
-</div>
-
-    </section>
-</section>
-  <section id="contact" class="hero">
-
-<h2>Let's Grow Your Business</h2>
-
-<a class="btn" href="mailto:service@orionpulse.co.in">
- Email 
-</a>
-
-  </section>  
-    <section class="cta">
-
-<h2>Ready to Grow Your Business?</h2>
-
-<a href="#contact" class="btn">
-Book a Free Strategy Call
-</a>
-
-    </section>
-<footer>
-
-<h2>Orionpulse</h2>
-
-<p>AI • SEO • Websites • Digital Marketing</p>
-
-<p>📧 service@orionpulse.co.in</p>
-
-<p>© 2026 Orionpulse Technologies OPC Pvt. Ltd.</p>
-
-</footer>
+</body>
+</html>
