@@ -202,3 +202,19 @@ color:#3B82F6;
 .stat p{
 color:#d1d5db;
 }
+.cta{
+text-align:center;
+padding:80px 20px;
+background:#0f172a;
+}
+
+.cta h2{
+font-size:40px;
+margin-bottom:15px;
+}
+
+.cta p{
+margin-bottom:30px;
+font-size:18px;
+color:#cbd5e1;
+}
