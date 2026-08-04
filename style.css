@@ -234,21 +234,3 @@ color:#cbd5e1;
 }
 html{
   scroll-behavior:smooth;
-}
-.whatsapp{
-position:fixed;
-bottom:110px;
-right:25px;
-background:#25D366;
-color:white;
-width:60px;
-height:60px;
-border-radius:50%;
-display:flex;
-justify-content:center;
-align-items:center;
-font-size:30px;
-text-decoration:none;
-box-shadow:0 10px 30px rgba(0,0,0,.3);
-z-index:999;
-}
