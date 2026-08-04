@@ -68,7 +68,113 @@ observer.unobserve(counter);
 counters.forEach(counter=>observer.observe(counter));
 
 </script>  
-<body>
+<div id="proposalModal" class="modal">
+
+<div class="modal-content">
+
+<span class="close">&times;</span>
+
+<h2>Get Your Free Digital Growth Proposal</h2>
+
+<p>Tell us about your business and we'll prepare a personalized strategy.</p>
+
+<form id="proposalForm">
+
+<input type="text" placeholder="Full Name" required>
+
+<input type="text" placeholder="Business Name" required>
+
+<input type="email" placeholder="Business Email" required>
+
+<input type="tel" placeholder="Phone Number" required>
+
+<select required>
+
+<option value="">Select Service</option>
+
+<option>SEO Optimization</option>
+
+<option>Website Development</option>
+
+<option>Google Ads</option>
+
+<option>Meta Ads</option>
+
+<option>AI Automation</option>
+
+<option>Complete Digital Marketing</option>
+
+</select>
+
+<select required>
+
+<option value="">Monthly Budget</option>
+
+<option>Below ₹25,000</option>
+
+<option>₹25,000 - ₹50,000</option>
+
+<option>₹50,000 - ₹1,00,000</option>
+
+<option>Above ₹1,00,000</option>
+
+</select>
+
+<textarea placeholder="Describe your business goals"></textarea>
+
+<button type="submit">
+🚀 Send Proposal Request
+</button>
+
+</form>
+
+</div>
+
+</div>
+ <script>
+
+const modal=document.getElementById("proposalModal");
+
+const btn=document.getElementById("proposalBtn");
+
+const close=document.querySelector(".close");
+
+btn.onclick=()=>{
+
+modal.style.display="block";
+
+}
+
+close.onclick=()=>{
+
+modal.style.display="none";
+
+}
+
+window.onclick=(e)=>{
+
+if(e.target==modal){
+
+modal.style.display="none";
+
+}
+
+}
+
+document.getElementById("proposalForm").addEventListener("submit",function(e){
+
+e.preventDefault();
+
+alert("✅ Thank you! Your proposal request has been received. We'll contact you within 24 hours.");
+
+modal.style.display="none";
+
+this.reset();
+
+});
+
+ </script>
+    <body>
 
 <header>
 <nav class="navbar">
@@ -95,6 +201,9 @@ counters.forEach(counter=>observer.observe(counter));
         <span></span>
         <span></span>
     </div>
+    <button id="proposalBtn" class="proposal-btn">
+    🚀 Get Free Proposal
+    </button>
 
     <div class="hero-content">
 
